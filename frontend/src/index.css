@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+@layer components {
+   .gridLayer {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 40px;
+   }
+
+   .reverseGridLayer {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 40px;
+   }
+
+   .formField {
+      min-width: 290px;
+   }
+}
+
+h2 {
+   font-size: 30px;
+}
+
+h4 {
+   font-size: 14px;
+   font-weight: 700;
+}
+
+input[type='text'] {
+   min-width: 250px;
+}
+
+input[type='radio'] {
+   width: 100%;
+   accent-color: #c7a943;
+}
+
+:root {
+   background-color: #181818;
+   color: white;
+   font-weight: 100;
+   --font-sans: 'Gilroy', sans-serif;
+}
+
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../assets/fonts/Gilroy-Regular.woff2') format('woff2');
+   font-weight: 100;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../assets/fonts/Gilroy-Light.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../assets/fonts/Gilroy-Bold.woff2') format('woff2');
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
