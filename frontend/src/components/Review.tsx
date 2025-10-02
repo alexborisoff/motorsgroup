@@ -1,9 +1,11 @@
 import { Button } from './ui/Button';
 import { StarRounded } from './ui/StarRounded';
+import user_avatar from '../assets/images/user_ava.png';
+import { GoOutIcon } from './GoOutIcon';
 
 export const Review = () => {
    return (
-      <div className="flex justify-around flex-col rounded-[0px_30px] w-[33%] h-[226px] bg-white">
+      <div className="flex justify-around flex-col px-2 pt-4 pb-2 rounded-[0px_30px] w-[33%] bg-white ">
          <div className="flex row-flex">
             <StarRounded />
             <StarRounded />
@@ -20,29 +22,18 @@ export const Review = () => {
             </p>
          </div>
 
-         <div>
-            <div >
-               <Button classname="flex bg-black gap-2 text-white font-bold rounded-[65px] p-4">
-                  Google Reviews
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     width="24"
-                     height="24"
-                     fill="none"
-                     viewBox="0 0 24 24"
-                     stroke="currentColor"
-                     strokeWidth={2}
-                     className="text-white"
-                  >
-                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 11l8-8m0 0h-6m6 0v6" />
-                     <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M20 13v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h7"
-                     />
-                  </svg>
-               </Button>
+         <div className="px-2 flex justify-between">
+            <div className="flex gap-2">
+               <img className="size-12" src={user_avatar} alt="Иконка пользователя" />
+               <div className="">
+                  <p className="text-black font-bold text-[18px]/5">Maxin Will</p>
+                  <p className="text-[#02090280] text-[14px]">Product Manager</p>
+               </div>
             </div>
+            <Button classname="flex bg-black gap-2 text-white font-bold rounded-[65px] p-4">
+               Google Reviews
+               <GoOutIcon />
+            </Button>
          </div>
       </div>
    );

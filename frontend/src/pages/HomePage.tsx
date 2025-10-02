@@ -80,7 +80,7 @@ export const HomePage = () => {
             </form>
          </section>
 
-         <section id='reviews'>
+         <section id='reviews' className='flex w-[80%]'>
             <ReviewList/>
          </section>
 
