@@ -1,6 +1,6 @@
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
    children: React.ReactNode;
-   classname: string;
+   classname?: string;
    onClick?: () => void;
 }
 
