@@ -1,4 +1,4 @@
-import { FileDownload } from '../components/FileDownload';
+import { FileDownload } from '../components/ui/FileDownload';
 import box from '../assets/images/front_box.png';
 import envelope from '../assets/images/front_envelope.png';
 import marker from '../assets/images/front_marker.png';
@@ -21,10 +21,10 @@ export const WarrantyPage = () => {
          </p>
 
          <div className="flex justify-between pb-10">
-            <FileDownload />
-            <FileDownload />
-            <FileDownload />
-            <FileDownload />
+            <FileDownload>Политика предотвращения и урегулирования конфликта интересов</FileDownload>
+            <FileDownload>Документы предпринимательской деятельности на территории Республики Беларуси</FileDownload>
+            <FileDownload>Документы предпринимательской деятельности на территории Республики Беларуси</FileDownload>
+            <FileDownload>Политика предотвращения и урегулирования конфликта интересов</FileDownload>
          </div>
 
          <h1 className="text-[40px] font-bold pb-10">Этапы работы</h1>
