@@ -1,4 +1,8 @@
 @import 'tailwindcss';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/scrollbar';
 @layer components {
    .gridLayer {
       display: grid;
@@ -17,8 +21,22 @@
    }
 }
 
+::-webkit-scrollbar {
+   width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #c7a943;
+   border-radius: 20px;
+   border: 2px solid #c7a943;
+}
+
 h2 {
    font-size: 30px;
+}
+
+h3 {
+   font-size: 40px;
 }
 
 h4 {

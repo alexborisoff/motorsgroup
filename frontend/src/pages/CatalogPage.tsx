@@ -1,7 +1,6 @@
-import React from 'react'
 
 export const CatalogPage = () => {
   return (
-    <div>CatalogPage</div>
+    <div className="flex items-center text-8xl justify-center h-[800px]">Catalog Coming Soon...</div>
   )
 }

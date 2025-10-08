@@ -1,5 +1,6 @@
 import { SupportForm } from '../components/SupportForm';
 
+
 export const Contacts = () => {
    return (
       <section className="mx-auto max-w-7xl px-4 py-10">

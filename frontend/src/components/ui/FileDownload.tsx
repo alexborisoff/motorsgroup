@@ -1,5 +1,5 @@
 import { Button } from './Button';
-import pdf_icon from '../assets/images/pdf_icon.png';
+import pdf_icon from '../../assets/images/pdf_icon.png';
 import type React from 'react';
 
 interface FileDownloadProps {

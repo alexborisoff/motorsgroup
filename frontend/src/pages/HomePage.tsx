@@ -2,11 +2,13 @@ import car from '../assets/images/car_home.png';
 import arrow from '../assets/images/arrow-right.svg';
 import timer from '../assets/images/timer.svg';
 import { Link } from 'react-router';
-import { Input } from '../components/ui/Input';
+import { Input } from '../components/UI/Input';
 import { Timer } from '../components/Timer';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/UI/Button';
 import { FAQ } from '../components/FAQ';
-import { ReviewList } from '../components/ReviewList';
+import { ReviewList } from '../components/ReviewSection/ReviewList';
+import { StaffList } from '../components/StaffSection/StaffList';
+import { ArticlesPreview } from '../components/ArticlesPreview';
 
 export const HomePage = () => {
    const handleChange = () => {};
@@ -80,8 +82,16 @@ export const HomePage = () => {
             </form>
          </section>
 
-         <section id='reviews' className='flex w-[80%]'>
-            <ReviewList/>
+         <section id="staff" className="flex flex-col w-[80%] ">
+            <StaffList />
+         </section>
+
+         <section id='articles_info' className='flex w-[80%]'>
+            <ArticlesPreview/>
+         </section>
+
+         <section id="reviews" className="flex w-[80%]">
+            <ReviewList />
          </section>
 
          <section className="flex w-[80%] justify-between mb-15">

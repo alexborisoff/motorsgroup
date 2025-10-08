@@ -26,13 +26,13 @@ const SOCIAL_NETWORKS: SocialItems[] = [
 
 export const Footer = () => {
    return (
-      <footer>
+      <footer className="mt-15">
          <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa627a9a761e22011f6d40e59279025a6d1404b1f8e2393463ae5d14d0fca4735&amp;source=constructor"
             width="100%"
             height="350"
             loading="lazy"
-            title="Карта расположения MotorsGroup"
+            title="Место расположение MotorsGroup на карте"
          ></iframe>
 
          <div className="h-[242px] flex justify-around items-center">

@@ -86,16 +86,16 @@ export const PrivacyPage = () => {
          <h1 className="text-2xl font-bold mb-3">Политика конфиденциальности</h1>
          <p className="mb-8">
             Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в
-            отношении всей информации, которую сайт www.zabuzhkivillage.by, может получить о Пользователе во время
+            отношении всей информации, которую сайт www.motorsgroup.by, может получить о Пользователе во время
             использования сайта.
          </p>
 
          <section id="terms" className="mb-10">
             <h2 className="text-xl font-semibold mb-4">1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</h2>
             <p className="mb-3">1.1. В настоящей Политике конфиденциальности используются следующие термины:</p>
-            <ol className="list-decimal pl-6 space-y-3">
+            <ol className=" pl-6 space-y-3">
                {terms.map((t, index) => (
-                  <li key={index}>
+                  <li className="marker:text-amber-300" key={index}>
                      <span>{`1.1.${index + 1}. `}</span>
                      {t}
                   </li>
@@ -105,7 +105,7 @@ export const PrivacyPage = () => {
 
          <section id="general" className="mb-10">
             <h2 className="text-xl font-semibold mb-4">2. ОБЩИЕ ПОЛОЖЕНИЯ</h2>
-            <ol className="list-decimal pl-6 space-y-3">
+            <ol className=" pl-6 space-y-3">
                {general.map((g, index) => (
                   <li key={index}>{`2.${index + 1}. ${g}`}</li>
                ))}
@@ -114,13 +114,13 @@ export const PrivacyPage = () => {
 
          <section id="subject" className="mb-10">
             <h2 className="text-xl font-semibold mb-4">3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</h2>
-            <ol className="list-decimal pl-6 space-y-3">
+            <ol className=" pl-6 space-y-3">
                {subjectIntro.map((text, index) => (
                   <li key={index}>{`3.${index + 1}. ${text}`}</li>
                ))}
                <li>
                   3.2. Персональные данные могут включать:
-                  <ol className="list-decimal pl-6 mt-2 space-y-2">
+                  <ol className=" pl-6 mt-2 space-y-2">
                      {personalInfoFields.map((item, index) => (
                         <li key={index}>{`3.2.${index + 1}. ${item}`}</li>
                      ))}
@@ -159,7 +159,7 @@ export const PrivacyPage = () => {
             <p className="mb-3">
                4.1. Персональные данные Пользователя Администрация Сайта может использовать в целях:
             </p>
-            <ol className="list-decimal pl-6 space-y-2">
+            <ol className=" pl-6 space-y-2">
                {goalsPrivacy.map((item, index) => (
                   <li key={index}>{`4.1.${index + 1}. ${item}`}</li>
                ))}
@@ -168,7 +168,7 @@ export const PrivacyPage = () => {
 
          <section id="processing" className="mb-10">
             <h2 className="text-xl font-semibold mb-4">5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</h2>
-            <ol className="list-decimal pl-6 space-y-3">
+            <ol className=" pl-6 space-y-3">
                {processingWays.map((item, index) => (
                   <li key={index}>{`5.${index + 1}. ${item}`}</li>
                ))}
@@ -180,7 +180,7 @@ export const PrivacyPage = () => {
             <div className="space-y-3">
                <div>
                   <p className="font-medium">6.1. Пользователь обязан:</p>
-                  <ol className="list-decimal pl-6 mt-2 space-y-2">
+                  <ol className=" pl-6 mt-2 space-y-2">
                      {userDuties.map((item, index) => (
                         <li key={index}>{`6.1.${index + 1}. ${item}`}</li>
                      ))}
@@ -188,7 +188,7 @@ export const PrivacyPage = () => {
                </div>
                <div>
                   <p className="font-medium">6.2. Администрация сайта обязана:</p>
-                  <ol className="list-decimal pl-6 mt-2 space-y-2">
+                  <ol className=" pl-6 mt-2 space-y-2">
                      {adminDuties.map((item, index) => (
                         <li key={index}>{`6.2.${index + 1}. ${item}`}</li>
                      ))}
@@ -199,7 +199,7 @@ export const PrivacyPage = () => {
 
          <section id="liability" className="mb-10">
             <h2 className="text-xl font-semibold mb-4">7. ОТВЕТСТВЕННОСТЬ СТОРОН</h2>
-            <ol className="list-decimal pl-6 space-y-3">
+            <ol className=" pl-6 space-y-3">
                {liability.map((item, index) => (
                   <li key={index}>{`7.${index + 1}. ${item}`}</li>
                ))}
@@ -208,7 +208,7 @@ export const PrivacyPage = () => {
 
          <section id="disputes" className="mb-10">
             <h2 className="text-xl font-semibold mb-4">8. РАЗРЕШЕНИЕ СПОРОВ</h2>
-            <ol className="list-decimal pl-6 space-y-3">
+            <ol className=" pl-6 space-y-3">
                {disputeResolution.map((item, index) => (
                   <li key={index}>{`8.${index + 1}. ${item}`}</li>
                ))}
@@ -217,7 +217,7 @@ export const PrivacyPage = () => {
 
          <section id="additional" className="mb-10">
             <h2 className="text-xl font-semibold mb-4">9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</h2>
-            <ol className="list-decimal pl-6 space-y-3">
+            <ol className=" pl-6 space-y-3">
                {additionalTerms.map((item, index) => (
                   <li key={index}>{`9.${index + 1}. ${item}`}</li>
                ))}

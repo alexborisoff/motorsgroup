@@ -1,11 +1,11 @@
-import { Button } from './ui/Button';
-import { StarRounded } from './ui/StarRounded';
-import user_avatar from '../assets/images/user_ava.png';
-import { GoOutIcon } from './GoOutIcon';
+import { Button } from '../UI/Button';
+import { StarRounded } from '../UI/StarRounded';
+import { GoOutIcon } from '../GoOutIcon';
+import user_avatar from '../../assets/images/user_ava.png';
 
 export const Review = () => {
    return (
-      <div className="flex justify-around flex-col px-2 pt-4 pb-2 rounded-[0px_30px] w-[33%] bg-white ">
+      <div className="flex justify-around flex-col px-2 pt-4 pb-2 rounded-[0px_30px] w-[100%] bg-white ">
          <div className="flex row-flex">
             <StarRounded />
             <StarRounded />

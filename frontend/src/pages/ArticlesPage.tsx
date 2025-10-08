@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export const ArticlesPage = () => {
-  return (
-    <div>ArticlesPage</div>
-  )
-}
+   return <div className="flex items-center text-8xl justify-center h-[800px]">Articles Coming Soon...</div>;
+};

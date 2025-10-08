@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { InputForm } from './ui/InputForm';
+import { FeedbackForm } from './FeedbackForm';
+
 import phoneIcon from '../assets/images/phone_icon.svg';
 import mail from '../assets/images/mail.svg';
 import tg from '../assets/images/telegram_black.svg';
@@ -7,8 +7,6 @@ import viber from '../assets/images/viber_black.svg';
 import inst from '../assets/images/insta_black.svg';
 import tiktok from '../assets/images/tiktok_black.svg';
 import youtube from '../assets/images/youtube_black.svg';
-import axios from 'axios';
-import { Button } from './ui/Button';
 
 type SocialItems = {
    href: string;
@@ -16,13 +14,6 @@ type SocialItems = {
    alt: string;
 };
 
-interface SupportForm {
-   name: string;
-   phone: string;
-   email: string;
-   theme: string;
-   message: string;
-}
 const SOCIAL_NETWORKS: SocialItems[] = [
    { href: 'https://t.me/+l4nR_mV4NIA2ZDZi', icon: tg, alt: 'Telegram' },
    {
@@ -36,106 +27,9 @@ const SOCIAL_NETWORKS: SocialItems[] = [
 ];
 
 export const SupportForm = () => {
-   const [form, setForm] = useState<SupportForm>({
-      name: '',
-      phone: '',
-      email: '',
-      theme: '',
-      message: '',
-   });
-   const [status, setStatus] = useState<string>('');
-
-   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setForm({ ...form, [e.target.name]: e.target.value });
-   };
-
-   const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-      try {
-         await axios.post('http://localhost:5000/api/send-email', form);
-         setStatus('Сообщение отправлено!');
-         setForm({ name: '', phone: '', email: '', theme: '', message: '' });
-      } catch (error) {
-         console.error(error);
-         setStatus('Ошибка при отправке.');
-      }
-   };
-
    return (
-      <form onSubmit={handleSubmit} className="flex py-3 justify-around rounded-4xl h-[483px] bg-[#202020]">
-         <div className="flex flex-col justify-around items-center">
-            <div className="flex gap-4">
-               <InputForm
-                  name="name"
-                  placeholder="Как Вас зовут?"
-                  type="text"
-                  value={form.name}
-                  onChange={handleChange}
-                  required
-               />
-               <InputForm
-                  name="phone"
-                  type="text"
-                  placeholder="Номер телефона"
-                  value={form.phone}
-                  onChange={handleChange}
-                  required
-               />
-            </div>
-            <div className="flex gap-4">
-               <InputForm name="email" placeholder="E-mail адрес" value={form.email} onChange={handleChange} required />
-               <InputForm
-                  name="theme"
-                  placeholder="Тема обращения"
-                  value={form.theme}
-                  onChange={handleChange}
-                  required
-               />
-            </div>
-
-            <div>
-               <h4>Выберете услугу</h4>
-               <div className="flex items-center">
-                  <InputForm name="choose_car" type="radio" value="choose_car" onChange={handleChange} checked />
-                  <label className="pr-3 pl-1" htmlFor="choose_car">
-                     Подбор автомобиля
-                  </label>
-
-                  <InputForm
-                     name="delivery_questions"
-                     type="radio"
-                     value="delivery_questions"
-                     onChange={handleChange}
-                  />
-                  <label className="pr-3 pl-1" htmlFor="delivery_questions">
-                     Вопросы доставки
-                  </label>
-
-                  <InputForm name="cooperation" type="radio" value="cooperation" onChange={handleChange} />
-                  <label className="pr-3 pl-1" htmlFor="cooperation">
-                     Сотрудничество
-                  </label>
-
-                  <InputForm name="other" type="radio" value="other" onChange={handleChange} />
-                  <label className="pr-3 pl-1" htmlFor="other">
-                     Другое
-                  </label>
-               </div>
-            </div>
-            <div>
-               <InputForm
-                  name="message"
-                  placeholder="Напишите сообщение"
-                  value={form.message}
-                  onChange={handleChange}
-                  multiline
-                  required
-               />
-            </div>
-            <div className="items-center">
-               <Button classname="w-[268px] h-[50px] bg-[#C7A943] rounded-[65px]">Отправить сообщение</Button>
-            </div>
-         </div>
+      <section className="flex py-3 justify-around rounded-4xl h-[483px] bg-[#202020]">
+         <FeedbackForm />
 
          <div className="h-[423px] mt-4 font-bold flex flex-col justify-center pl-10 gap-5 bg-[#C7A943] w-[471px] rounded-3xl">
             <h2>Основные контакты</h2>
@@ -167,6 +61,6 @@ export const SupportForm = () => {
                ))}
             </div>
          </div>
-      </form>
+      </section>
    );
 };

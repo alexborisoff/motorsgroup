@@ -1,4 +1,4 @@
-import { FileDownload } from '../components/ui/FileDownload';
+import { FileDownload } from '../components/UI/FileDownload';
 import box from '../assets/images/front_box.png';
 import envelope from '../assets/images/front_envelope.png';
 import marker from '../assets/images/front_marker.png';

@@ -5,8 +5,8 @@ import { ArticlesPage } from './pages/ArticlesPage';
 import { SelectionPage } from './pages/SelectionPage';
 import { Contacts } from './pages/Contacts';
 import { WarrantyPage } from './pages/WarrantyPage';
-import { Header } from './components/ui/Header';
-import { Footer } from './components/ui/Footer';
+import { Header } from './components/UI/Header';
+import { Footer } from './components/UI/Footer';
 import { PrivacyPage } from './pages/PrivacyPage';
 
 export const App = () => {
