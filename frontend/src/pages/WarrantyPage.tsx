@@ -6,7 +6,7 @@ import marker from '../assets/images/front_marker.png';
 export const WarrantyPage = () => {
    return (
       <section className="mx-auto max-w-7xl px-4 py-10">
-         <h1 className="text-[40px] font-bold pb-10">Гарантии</h1>
+         <h1 className=" pb-10 text-center sm:text-left">Гарантии</h1>
          <p className="text-[14px] text-justify">
             Политика «Знай своего клиента» (KYC) в последнее время приобретает все большее значение во всем мире,
             особенно среди банков и других финансовых учреждений для предотвращения кражи личных данных, отмывания
@@ -27,13 +27,13 @@ export const WarrantyPage = () => {
             <FileDownload>Политика предотвращения и урегулирования конфликта интересов</FileDownload>
          </div>
 
-         <h1 className="text-[40px] font-bold pb-10">Этапы работы</h1>
+         <h2 className="text-[40px] font-bold pb-10">Этапы работы</h2>
          <div className="flex flex-col gap-10">
             <div className="gridLayer">
                <div className="relative flex items-center justify-between gap-[18px] border border-[#c7a94333] rounded-[0px_30px] bg-[#121212] py-[25px] px-[30px]">
                   <div className="absolute top-0 translate-y-[-50%] left-[30px] text-5xl font-bold">01</div>
                   <div>
-                     <h3 className="text-3xl font-bold text-[#C7A943]">ЗАКЛЮЧЕНИЕ ДОГОВОРА</h3>
+                     <h3 className="font-bold text-primary">ЗАКЛЮЧЕНИЕ ДОГОВОРА</h3>
                      <p>
                         При заключении соглашений, договоров или иных обязательств важно четко устанавливать условия их
                         исполнения, конкретные сроки выполнения и возможные последствия за несоблюдение взятых на себя
@@ -42,7 +42,7 @@ export const WarrantyPage = () => {
                   </div>
                   <img src={envelope} alt="Заключение договора" />
                </div>
-               <div className="relative flex items-center justify-between gap-[18px] rounded-[0px_30px] bg-[#c7a943] py-[25px] px-[30px]">
+               <div className="relative flex items-center justify-between gap-[18px] rounded-[0px_30px] bg-primary py-[25px] px-[30px]">
                   <div className="absolute top-0 translate-y-[-50%] left-[30px] text-5xl font-bold">02</div>
                   <div>
                      <h3 className="text-[27px] font-bold">ПОДБОР И ПРОВЕРКА</h3>
@@ -55,7 +55,7 @@ export const WarrantyPage = () => {
             </div>
 
             <div className="reverseGridLayer">
-               <div className="relative flex items-center justify-between gap-[18px] rounded-[0px_30px] bg-[#c7a943] py-[25px] px-[30px]">
+               <div className="relative flex items-center justify-between gap-[18px] rounded-[0px_30px] bg-primary py-[25px] px-[30px]">
                   <div className="absolute top-0 translate-y-[-50%] left-[30px] text-5xl font-bold">03</div>
                   <div>
                      <h3 className="text-[27px] font-bold">ТОРГИ И ОПЛАТА</h3>
@@ -68,7 +68,7 @@ export const WarrantyPage = () => {
                <div className="relative flex items-center justify-between gap-[18px] border border-[#c7a94333] rounded-[0px_30px] bg-[#121212] py-[25px] px-[30px]">
                   <div className="absolute top-0 translate-y-[-50%] left-[30px] text-5xl font-bold">04</div>
                   <div>
-                     <h3 className="text-3xl font-bold text-[#C7A943]">ДОСТАВКА АВТО В ПОРТ</h3>
+                     <h3 className="text-3xl font-bold text-primary">ДОСТАВКА АВТО В ПОРТ</h3>
                      <p>
                         Процесс транспортировки автомобиля в порт требует тщательного контроля на всех этапах, включая
                         проверку его состояния. Для обеспечения безопасности и подтверждения целостности груза делаем
@@ -83,7 +83,7 @@ export const WarrantyPage = () => {
                <div className="relative flex items-center justify-between gap-[18px] border border-[#c7a94333] rounded-[0px_30px] bg-[#121212] py-[25px] px-[30px]">
                   <div className="absolute top-0 translate-y-[-50%] left-[30px] text-5xl font-bold">05</div>
                   <div>
-                     <h3 className="text-3xl font-bold text-[#C7A943]">ПРОМЕЖУТОЧНАЯ ТОЧКА</h3>
+                     <h3 className="text-3xl font-bold text-primary">ПРОМЕЖУТОЧНАЯ ТОЧКА</h3>
                      <p>
                         При организации транспортировки автомобиля на дальние расстояния часто используется
                         промежуточная точка, после которой уже автомобиль отправляется в ваш город назначения.
@@ -91,10 +91,10 @@ export const WarrantyPage = () => {
                   </div>
                   <img src={marker} alt="Промежуочная точка" />
                </div>
-               <div className="relative flex items-center justify-between gap-[18px] rounded-[0px_30px] bg-[#c7a943] py-[25px] px-[30px]">
+               <div className="relative flex items-center justify-between gap-[18px] rounded-[0px_30px] bg-primary py-[25px] px-[30px]">
                   <div className="absolute top-0 translate-y-[-50%] left-[30px] text-5xl font-bold">06</div>
                   <div>
-                     <h3 className="text-[27px] font-bold">ТАМОЖЕННОЕ ОФОРМЛЕНИЕ</h3>
+                     <h3 className=" font-bold">ТАМОЖЕННОЕ ОФОРМЛЕНИЕ</h3>
                      <p>
                         Процесс таможенного оформления является важным этапом при ввозе автомобиля и требует точного
                         соблюдения всех процедур и правил. Мы оказываем полное сопровождение на всех этапах.

@@ -12,8 +12,8 @@ export const FileDownload: React.FC<FileDownloadProps> = ({ children }) => {
          <div>
             <img className="size-16" src={pdf_icon} alt="Загрузка PDF-файла" />
          </div>
-         <p className="max-w-[230px] text-center">{children}</p>
-         <Button classname="px-5 w-[180px] h-[50px] bg-[#C7A943] rounded-[65px]">Скачать</Button>
+         <p className="max-w-[230px] font-bold text-center leading-[21px]">{children}</p>
+         <Button classname="px-5 w-[120px] h-[50px] bg-primary rounded-main">Скачать</Button>
       </div>
    );
 };
