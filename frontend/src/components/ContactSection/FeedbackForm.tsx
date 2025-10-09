@@ -1,44 +1,42 @@
 import { useState } from 'react';
-import { Button } from './UI/Button';
-import { InputForm } from './UI/InputForm';
-import axios from 'axios';
+import { Button } from '../UI/Button';
+import { InputForm } from '../UI/InputForm';
+
+type ThemeOption = 'choose_car' | 'delivery_questions' | 'cooperation' | 'other';
 
 interface FeedbackForm {
    name: string;
    phone: string;
    email: string;
    theme: string;
+   service: ThemeOption;
    message: string;
 }
 
 export const FeedbackForm = () => {
-    const [form, setForm] = useState<FeedbackForm>({
+   const [form, setForm] = useState<FeedbackForm>({
       name: '',
       phone: '',
       email: '',
       theme: '',
+      service: 'choose_car',
       message: '',
    });
-   const [status, setStatus] = useState<string>('');
 
    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setForm({ ...form, [e.target.name]: e.target.value });
+      const { name, value } = e.target;
+      setForm({ ...form, [name]: value });
    };
-    const handleSubmit = async (e: React.FormEvent) => {
+
+   const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
-      try {
-         await axios.post('http://localhost:5000/api/send-email', form);
-         setStatus('Сообщение отправлено!');
-         setForm({ name: '', phone: '', email: '', theme: '', message: '' });
-      } catch (error) {
-         console.error(error);
-         setStatus('Ошибка при отправке.');
-      }
+      alert('Форма отправлена');
+      setForm({ name: '', phone: '', email: '', theme: '', service: 'choose_car', message: '' });
    };
    return (
-      <form onSubmit={handleSubmit} className="flex">
+      <form onSubmit={handleSubmit} className="flex ">
          <div className="flex flex-col justify-around items-center">
-            <div className="flex gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                <InputForm
                   name="name"
                   placeholder="Как Вас зовут?"
@@ -55,8 +53,6 @@ export const FeedbackForm = () => {
                   onChange={handleChange}
                   required
                />
-            </div>
-            <div className="flex gap-4">
                <InputForm name="email" placeholder="E-mail адрес" value={form.email} onChange={handleChange} required />
                <InputForm
                   name="theme"
@@ -70,27 +66,50 @@ export const FeedbackForm = () => {
             <div>
                <h4>Выберете услугу</h4>
                <div className="flex items-center">
-                  <InputForm name="choose_car" type="radio" value="choose_car" onChange={handleChange} checked />
+                  <InputForm
+                     name="service"
+                     type="radio"
+                     value="choose_car"
+                     onChange={handleChange}
+                     required={false}
+                     checked={form.service === 'choose_car'}
+                  />
                   <label className="pr-3 pl-1" htmlFor="choose_car">
                      Подбор автомобиля
                   </label>
 
                   <InputForm
-                     name="delivery_questions"
+                     name="service"
                      type="radio"
                      value="delivery_questions"
                      onChange={handleChange}
+                     required={false}
+                     checked={form.service === 'delivery_questions'}
                   />
                   <label className="pr-3 pl-1" htmlFor="delivery_questions">
                      Вопросы доставки
                   </label>
 
-                  <InputForm name="cooperation" type="radio" value="cooperation" onChange={handleChange} />
+                  <InputForm
+                     name="service"
+                     type="radio"
+                     value="cooperation"
+                     required={false}
+                     onChange={handleChange}
+                     checked={form.service === 'cooperation'}
+                  />
                   <label className="pr-3 pl-1" htmlFor="cooperation">
                      Сотрудничество
                   </label>
 
-                  <InputForm name="other" type="radio" value="other" onChange={handleChange} />
+                  <InputForm
+                     name="service"
+                     type="radio"
+                     value="other"
+                     required={false}
+                     onChange={handleChange}
+                     checked={form.service === 'other'}
+                  />
                   <label className="pr-3 pl-1" htmlFor="other">
                      Другое
                   </label>
@@ -107,7 +126,7 @@ export const FeedbackForm = () => {
                />
             </div>
             <div className="items-center">
-               <Button classname="w-[268px] h-[50px] bg-[#C7A943] rounded-[65px]">Отправить сообщение</Button>
+               <Button classname="w-[268px] h-[50px] bg-primary rounded-main">Отправить сообщение</Button>
             </div>
          </div>
       </form>

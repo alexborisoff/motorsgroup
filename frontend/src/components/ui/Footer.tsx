@@ -26,7 +26,7 @@ const SOCIAL_NETWORKS: SocialItems[] = [
 
 export const Footer = () => {
    return (
-      <footer className="mt-15">
+      <footer className="grid mt-15">
          <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa627a9a761e22011f6d40e59279025a6d1404b1f8e2393463ae5d14d0fca4735&amp;source=constructor"
             width="100%"
@@ -51,7 +51,7 @@ export const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-               <p className="text-[#C7A943] font-semibold mb-3 text-[16px]"> Основное </p>
+               <p className="text-primary font-semibold mb-3 text-[16px]"> Основное </p>
                <Link className="" to="/catalog">
                   Каталог автомобилей
                </Link>
@@ -61,7 +61,7 @@ export const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-               <p className="text-[#C7A943] font-semibold mb-3 text-[16px]"> Информация </p>
+               <p className="text-primary font-semibold mb-3 text-[16px]"> Информация </p>
                <Link to="/privacy">Политика конфиденциальности</Link>
                <p>Пользовательское Соглашение</p>
                <p>Условия доставки и возрата </p>
@@ -73,7 +73,7 @@ export const Footer = () => {
                <p className="font-semibold">Время работы: пн-пт с 10.00 до 19.00</p>
                <a
                   href="tel:+375445771313"
-                  className="inline-flex items-center gap-3  text-[#C7A943]  py-2 hover:opacity-95 transition-opacity"
+                  className="inline-flex items-center gap-3  text-primary  py-2 hover:opacity-95 transition-opacity"
                   aria-label="Позвонить +375 (44) 577-13-13"
                >
                   <img src={phoneIcon} alt="Телефон" />
@@ -84,7 +84,7 @@ export const Footer = () => {
 
                <a
                   href="tel:+375445771313"
-                  className="flex items-center gap-3  text-[#C7A943]  py-2 hover:opacity-95 transition-opacity"
+                  className="flex items-center gap-3 text-primary  py-2 hover:opacity-95 transition-opacity"
                   aria-label="Позвонить +375 (44) 577-13-13"
                >
                   <img src={phoneIcon} alt="Телефон" />

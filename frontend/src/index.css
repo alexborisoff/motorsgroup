@@ -3,6 +3,15 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 @import 'swiper/css/scrollbar';
+
+@theme {
+   --color-main-dark: #171717;
+   --color-primary: #c7a943;
+   --color-secondary: #b89935;
+
+   --radius-main: 65px;
+}
+
 @layer components {
    .gridLayer {
       display: grid;
@@ -19,6 +28,13 @@
    .formField {
       min-width: 290px;
    }
+}
+
+:root {
+   background-color: #181818;
+   color: white;
+   font-weight: 100;
+   --font-sans: 'Gilroy', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -44,21 +60,39 @@ h4 {
    font-weight: 700;
 }
 
-input[type='text'] {
-   min-width: 250px;
+input[type="text"] {
+   padding: 20px;
 }
 
-input[type='radio'] {
-   width: 100%;
-   accent-color: #c7a943;
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none; /* для Safari */
+  -moz-appearance: none;    /* для Firefox */
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-:root {
-   background-color: #181818;
-   color: white;
-   font-weight: 100;
-   --font-sans: 'Gilroy', sans-serif;
+input[type="radio"]:checked::after {
+  content: "✓";
+  color: #202020;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%);
 }
+
+input[type="radio"]:checked {
+  background-color: #c7a943;
+  border-color: #c7a943;
+}
+
 
 @font-face {
    font-family: 'Gilroy';

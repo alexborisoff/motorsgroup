@@ -29,7 +29,7 @@ export const InputForm: React.FC<InputFormProps> = ({
                placeholder={placeholder}
                required={required}
                onChange={onChange}
-               className="border w-[595px] bg-[#171717] border-[#292929] p-2 rounded-[20px] resize-none"
+               className="border w-[595px] bg-main-dark border-[#292929] p-2 rounded-[20px] resize-none"
                rows={4}
             />
          ) : (
@@ -42,7 +42,7 @@ export const InputForm: React.FC<InputFormProps> = ({
                required={required}
                checked={checked}
                onChange={onChange}
-               className=" border bg-[#171717] border-[#292929] p-5 rounded-[65px]"
+               className="w-full border bg-main-dark border-[#292929] rounded-main"
             />
          )}
       </div>
