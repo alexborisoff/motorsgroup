@@ -91,7 +91,7 @@ export const PrivacyPage = () => {
          </p>
 
          <section id="terms" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</h2>
+            <h3 className="text-xl font-semibold mb-4">1. Определение терминов</h3>
             <p className="mb-3">1.1. В настоящей Политике конфиденциальности используются следующие термины:</p>
             <ol className=" pl-6 space-y-3">
                {terms.map((t, index) => (
@@ -104,7 +104,7 @@ export const PrivacyPage = () => {
          </section>
 
          <section id="general" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">2. ОБЩИЕ ПОЛОЖЕНИЯ</h2>
+            <h3 className="text-xl font-semibold mb-4">2. Общие положения</h3>
             <ol className=" pl-6 space-y-3">
                {general.map((g, index) => (
                   <li key={index}>{`2.${index + 1}. ${g}`}</li>
@@ -113,7 +113,7 @@ export const PrivacyPage = () => {
          </section>
 
          <section id="subject" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</h2>
+            <h3 className="text-xl font-semibold mb-4">3. Предмет политики конфиденциальности</h3>
             <ol className=" pl-6 space-y-3">
                {subjectIntro.map((text, index) => (
                   <li key={index}>{`3.${index + 1}. ${text}`}</li>
@@ -155,7 +155,7 @@ export const PrivacyPage = () => {
          </section>
 
          <section id="purposes" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ</h2>
+            <h3 className="text-xl font-semibold mb-4">4. Цели сбора персональной информации пользователя</h3>
             <p className="mb-3">
                4.1. Персональные данные Пользователя Администрация Сайта может использовать в целях:
             </p>
@@ -167,7 +167,7 @@ export const PrivacyPage = () => {
          </section>
 
          <section id="processing" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</h2>
+            <h3 className="text-xl font-semibold mb-4">5. Способы и сроки обработки персональной информации</h3>
             <ol className=" pl-6 space-y-3">
                {processingWays.map((item, index) => (
                   <li key={index}>{`5.${index + 1}. ${item}`}</li>
@@ -176,7 +176,7 @@ export const PrivacyPage = () => {
          </section>
 
          <section id="obligations" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">6. ОБЯЗАТЕЛЬСТВА СТОРОН</h2>
+            <h3 className="text-xl font-semibold mb-4">6. Обязательства сторон</h3>
             <div className="space-y-3">
                <div>
                   <p className="font-medium">6.1. Пользователь обязан:</p>
@@ -198,7 +198,7 @@ export const PrivacyPage = () => {
          </section>
 
          <section id="liability" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">7. ОТВЕТСТВЕННОСТЬ СТОРОН</h2>
+            <h3 className="text-xl font-semibold mb-4">7. Ответственность сторон</h3>
             <ol className=" pl-6 space-y-3">
                {liability.map((item, index) => (
                   <li key={index}>{`7.${index + 1}. ${item}`}</li>
@@ -207,7 +207,7 @@ export const PrivacyPage = () => {
          </section>
 
          <section id="disputes" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">8. РАЗРЕШЕНИЕ СПОРОВ</h2>
+            <h3 className="text-xl font-semibold mb-4">8. Разрешение споров</h3>
             <ol className=" pl-6 space-y-3">
                {disputeResolution.map((item, index) => (
                   <li key={index}>{`8.${index + 1}. ${item}`}</li>
@@ -216,7 +216,7 @@ export const PrivacyPage = () => {
          </section>
 
          <section id="additional" className="mb-10">
-            <h2 className="text-xl font-semibold mb-4">9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</h2>
+            <h3 className="text-xl font-semibold mb-4">9. Дополнительные условия</h3>
             <ol className=" pl-6 space-y-3">
                {additionalTerms.map((item, index) => (
                   <li key={index}>{`9.${index + 1}. ${item}`}</li>
