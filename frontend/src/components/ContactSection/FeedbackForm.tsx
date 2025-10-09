@@ -64,7 +64,7 @@ export const FeedbackForm = () => {
             </div>
 
             <div>
-               <h4>Выберете услугу</h4>
+               <h6>Выберете услугу</h6>
                <div className="flex items-center">
                   <InputForm
                      name="service"

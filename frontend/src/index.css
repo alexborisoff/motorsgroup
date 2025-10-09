@@ -47,52 +47,59 @@
    border: 2px solid #c7a943;
 }
 
-h2 {
-   font-size: 30px;
-}
-
-h3 {
+h1 {
    font-size: 40px;
 }
 
+h2 {
+   font-size: 40px;
+}
+
+h3 {
+   font-size: 30px;
+}
+
 h4 {
+   font-size: 28px;
+}
+
+h6 {
    font-size: 14px;
    font-weight: 700;
 }
 
-input[type="text"] {
+input[type='text'] {
    padding: 20px;
 }
 
-input[type="radio"] {
-  appearance: none;
-  -webkit-appearance: none; /* для Safari */
-  -moz-appearance: none;    /* для Firefox */
-  width: 16px;
-  height: 16px;
-  background: white;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.2s ease;
+input[type='radio'] {
+   appearance: none;
+   -webkit-appearance: none; /* для Safari */
+   -moz-appearance: none; /* для Firefox */
+   width: 16px;
+   height: 16px;
+   background: white;
+   border-radius: 50%;
+   display: inline-block;
+   position: relative;
+   cursor: pointer;
+   transition: all 0.2s ease;
 }
 
-input[type="radio"]:checked::after {
-  content: "✓";
-  color: #202020;
-  font-size: 12px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -48%);
+input[type='radio']:checked::after {
+   content: '✓';
+   color: #202020;
+   font-size: 12px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -48%);
 }
 
-input[type="radio"]:checked {
-  background-color: #c7a943;
-  border-color: #c7a943;
+input[type='radio']:checked {
+   background-color: #c7a943;
+   border-color: #c7a943;
 }
-
 
 @font-face {
    font-family: 'Gilroy';

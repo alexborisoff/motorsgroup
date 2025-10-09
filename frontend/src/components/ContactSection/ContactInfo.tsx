@@ -27,7 +27,7 @@ const SOCIAL_NETWORKS: SocialItems[] = [
 export const ContactInfo = () => {
    return (
       <div className="h-[40vh] font-bold flex flex-col justify-center pl-10 gap-10 bg-primary w-[471px] rounded-3xl">
-         <h2>Основные контакты</h2>
+         <h4>Основные контакты</h4>
          <div className="flex flex-col gap-2">
             <a className="inline-flex" href="mailto:support@motorsgroup.by">
                <img src={mail} alt="Логотип email" />
