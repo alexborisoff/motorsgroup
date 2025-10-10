@@ -1,4 +1,4 @@
-export const ArrowLeft = () => {
+export const ArrowLeft= () => {
    return (
       <svg
          className="w-[50px] h-[50px] bg-white rounded-full p-2 shadow-md"

@@ -75,8 +75,8 @@ input[type='text'] {
 
 input[type='radio'] {
    appearance: none;
-   -webkit-appearance: none; /* для Safari */
-   -moz-appearance: none; /* для Firefox */
+   -webkit-appearance: none; 
+   -moz-appearance: none; 
    width: 16px;
    height: 16px;
    background: white;
@@ -100,6 +100,10 @@ input[type='radio']:checked::after {
 input[type='radio']:checked {
    background-color: #c7a943;
    border-color: #c7a943;
+}
+
+#title {
+   font-size: 90px;
 }
 
 @font-face {

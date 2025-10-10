@@ -10,7 +10,9 @@ export const Timer: React.FC<CountDownProps> = ({ hours = 0, minutes = 1, second
    const [[h, m, s], setTime] = useState<[number, number, number]>([hours, minutes, seconds]);
 
    const tick = () => {
-      if (m === 0 && s === 0) {
+      if (h === 0 && m === 0 && s === 0) {
+         setTime([h * 0, m * 0, s * 0]);
+      } else if (m === 0 && s === 0) {
          setTime([h - 1, 59, 59]);
       } else if (s === 0) {
          setTime([h, m - 1, 59]);
@@ -21,14 +23,18 @@ export const Timer: React.FC<CountDownProps> = ({ hours = 0, minutes = 1, second
 
    useEffect(() => {
       const timerID = setInterval(tick, 1000);
-      return () => clearInterval(timerID);
+      if (seconds === 0) {
+         clearInterval(timerID);
+      } else {
+         return () => clearInterval(timerID);
+      }
    });
 
    return (
       <>
-         <p className="text-5xl font-bold min-w-[200px]">{`${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s
+         <p className="text-5xl font-bold min-w-[200px]">{`${h.toString().padStart(2, '0')}:${m
             .toString()
-            .padStart(2, '0')}`}</p>
+            .padStart(2, '0')}:${s.toString().padStart(2, '0')}`}</p>
       </>
    );
 };

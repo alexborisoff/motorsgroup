@@ -11,7 +11,7 @@ export const Accordion: React.FC<AccordionType> = ({ question, answer }) => {
    return (
       <div className="py-[10px] border-[#FFFFFF1A] border-b">
          <button className="flex justify-between w-full" onClick={() => setAccordionStatus(!accordionStatus)}>
-            <span className="text-xl font-bold">{question}</span>
+            <span className="text-sm font-bold xl:text-xl">{question}</span>
             <svg className="fill-amber-50 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                <rect
                   y="7"

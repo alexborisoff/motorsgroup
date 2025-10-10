@@ -4,7 +4,7 @@ type InputProps = {
    value: string;
    placeholder?: string;
    required?: boolean;
-   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const Input: React.FC<InputProps> = ({ name, type = 'text', value, placeholder, required = true, onChange }) => {
@@ -17,7 +17,7 @@ export const Input: React.FC<InputProps> = ({ name, type = 'text', value, placeh
          placeholder={placeholder}
          required={required}
          onChange={onChange}
-         className="border placeholder:text-white bg-[#FFFFFF33] border-[#FFFFFF4D] p-5 rounded-[65px]"
+         className="w-full border placeholder:text-white placeholder:text-[14px] bg-[#FFFFFF33] border-[#FFFFFF4D] pl-4 rounded-main"
       />
    );
 };
