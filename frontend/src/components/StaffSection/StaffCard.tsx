@@ -1,8 +1,8 @@
 import { Link } from 'react-router';
 import manager_photo from '../../assets/images/manager_photo.png';
-import tg_icon from '../../assets/images/telegram.svg';
-import viber_icon from '../../assets/images/viber.svg';
-import inst_icon from '../../assets/images/insta.svg';
+import tg_icon from '../../assets/images/icons/telegram.svg';
+import viber_icon from '../../assets/images/icons/viber.svg';
+import inst_icon from '../../assets/images/icons/insta.svg';
 
 type Staff = {
    avatar: string;

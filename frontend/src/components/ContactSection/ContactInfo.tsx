@@ -1,10 +1,10 @@
-import phoneIcon from '../../assets/images/phone_icon.svg';
-import mail from '../../assets/images/mail.svg';
-import tg from '../../assets/images/telegram_black.svg';
-import viber from '../../assets/images/viber_black.svg';
-import inst from '../../assets/images/insta_black.svg';
-import tiktok from '../../assets/images/tiktok_black.svg';
-import youtube from '../../assets/images/youtube_black.svg';
+import phoneIcon from '../../assets/images/icons/phone_icon.svg';
+import mail from '../../assets/images/icons/mail.svg';
+import tg from '../../assets/images/icons/telegram_black.svg';
+import viber from '../../assets/images/icons/viber_black.svg';
+import inst from '../../assets/images/icons/insta_black.svg';
+import tiktok from '../../assets/images/icons/tiktok_black.svg';
+import youtube from '../../assets/images/icons/youtube_black.svg';
 
 type SocialItems = {
    href: string;

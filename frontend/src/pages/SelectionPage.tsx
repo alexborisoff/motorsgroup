@@ -3,8 +3,8 @@ import { SelectionList } from '../components/SelectionList';
 
 export const SelectionPage = () => {
    return (
-      <main className="flex flex-col ">
-         <section > 
+      <main className="flex flex-col">
+         <section className='relative overflow-hidden ' > 
          <SelectionInteractive />
          </section>
          <section className="flex flex-col items-center justify-center  ">

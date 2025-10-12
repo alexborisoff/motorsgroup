@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import car from '../assets/images/car_home.png';
-import arrow from '../assets/images/arrow-right.svg';
-import timer from '../assets/images/timer.svg';
+import car from '../assets/images/test.png';
+import arrow from '../assets/images/arrow_right.svg';
+import timer from '../assets/images/icons/timer.svg';
 import { Link } from 'react-router';
 import { Input } from '../components/UI/Input';
 import { Timer } from '../components/Timer';
@@ -10,9 +10,10 @@ import { FAQ } from '../components/FAQ';
 import { ReviewList } from '../components/ReviewSection/ReviewList';
 import { StaffList } from '../components/StaffSection/StaffList';
 import { ArticlesPreview } from '../components/ArticlesPreview';
+import { CountUp } from '../components/UI/CountUp';
 
 interface SelectForm {
-    model: string;
+   model: string;
    budget: string;
    deadline: string;
    country: string;
@@ -39,9 +40,9 @@ export const HomePage = () => {
    const handleClick = () => {};
 
    return (
-      <main className="flex flex-col items-center gap-15">
-         <section className="w-[80%] flex flex-col">
-            <img className="absolute top-[130px] right-0 z-20" src={car} alt="Привезем автомобиль" />
+      <main className="flex flex-col items-center gap-15 relative overflow-x-hidden">
+         <section className="w-[80%] flex flex-col ">
+            <img className="absolute top-[50px] left-[550px]  z-[4]" src={car} alt="Привезем автомобиль" />
             <h1 id="title" className="max-w-3xl pt-6 text-[90px] leading-26 font-extrabold tracking-normal ">
                <span className="text-primary">ПРИВЕЗЕМ</span> АВТОМОБИЛЬ
             </h1>
@@ -69,15 +70,21 @@ export const HomePage = () => {
                   <p className="text-[14px]">Сопровождение клиента</p>
                </div>
                <div>
-                  <p className="relative text-[50px] font-extrabold z-30">5 ЛЕТ</p>
+                  <p className="relative text-[50px] font-extrabold z-30">
+                     <CountUp from={1} to={5} separator="," direction="up" duration={3} className="count-up-text" /> ЛЕТ
+                  </p>
                   <p className="text-[14px]">Опыта в сфере подбора</p>
                </div>
                <div>
-                  <p className="relative text-[50px] font-extrabold z-30">500+</p>
+                  <p className="relative text-[50px] font-extrabold z-30">
+                     <CountUp from={300} to={500} separator="" direction="up" duration={2} className="count-up-text" />+
+                  </p>
                   <p className="text-[14px]">Авто доставляем в год</p>
                </div>
                <div>
-                  <p className="relative text-[50px] font-extrabold z-30">40+</p>
+                  <p className="relative text-[50px] font-extrabold z-30">
+                     <CountUp from={5} to={40} separator="," direction="up" duration={1} className="count-up-text" />+
+                  </p>
                   <p className="text-[14px]">Решений проблемных ситуаций</p>
                </div>
             </div>

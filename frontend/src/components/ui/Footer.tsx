@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
-import phoneIcon from '../../assets/images/phone_orange.svg';
-import tg from '../../assets/images/telegram.svg';
-import viber from '../../assets/images/viber.svg';
-import inst from '../../assets/images/insta.svg';
-import tiktok from '../../assets/images/tiktok.svg';
-import youtube from '../../assets/images/youtube.svg';
+import phoneIcon from '../../assets/images/icons/phone_orange.svg';
+import tg from '../../assets/images/icons/telegram.svg';
+import viber from '../../assets/images/icons/viber.svg';
+import inst from '../../assets/images/icons/insta.svg';
+import tiktok from '../../assets/images/icons/tiktok.svg';
+import youtube from '../../assets/images/icons/youtube.svg';
 
 type SocialItems = {
    href: string;

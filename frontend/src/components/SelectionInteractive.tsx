@@ -1,12 +1,12 @@
-import car from '../assets/images/car_selection.png';
+import car from '../assets/images/select_auto.png';
 
 export const SelectionInteractive = () => {
    return (
       <>
-         <h3 className="mx-auto max-w-7xl px-4 py-1 font-extrabold">Подбор автомобиля</h3>
-         <div className=" h-[56vh]">
-            <div className="absolute right-[-340px] top-[100px] rounded-[50%] size-[666px] bg-[#C7A943]"></div>
-            <img className="absolute right-0 top-20" src={car} alt="Картинка машины" />
+         <h1 className="mx-auto max-w-7xl px-4 py-5 font-extrabold ">Подбор автомобиля</h1>
+         <div className="h-[60vh] ">
+            <div className="absolute left-[1333px] top-[30px] rounded-[50%] size-[666px] bg-primary"></div>
+            <img className="h-[695px] absolute left-[1000px] top-1 z-3" src={car} alt="Картинка машины" />
          </div>
       </>
    );

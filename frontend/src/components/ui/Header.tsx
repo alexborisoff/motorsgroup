@@ -1,7 +1,10 @@
-import phoneIcon from '../../assets/images/phone_icon.svg';
+import { useState } from 'react';
+import phoneIcon from '../../assets/images/icons/phone_icon.svg';
 import { NavLink, Link } from 'react-router';
 
 export const Header = () => {
+   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
    const navLinkClass = ({ isActive }: { isActive: boolean }) =>
       `px-5 py-2 rounded-3xl transition-colors  ${
          isActive ? 'bg-[#C7A943] text-white font-semibold' : 'text-white/80 hover:text-[#C7A943]'
@@ -10,7 +13,7 @@ export const Header = () => {
    return (
       <header className="flex justify-around items-center h-25">
          <Link to="/">
-            <img src="/logo.png" alt="logo" />
+            <img src="./logo.png" alt="Логотип" />
          </Link>
 
          <div className="text-white">
