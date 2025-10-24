@@ -1,0 +1,212 @@
+import { createApi, fakeBaseQuery } from '@reduxjs/toolkit/query/react';
+import type { Car } from '../../types/Car';
+import carImage from '../../assets/images/carItem.jpg';
+
+const mockCars: Car[] = [
+   {
+      id: '1',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Equinox',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 39500,
+      year: 2020,
+      price: 18700,
+      discount: 14200,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1368,
+   },
+   {
+      id: '2',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Trax',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 22222,
+      year: 2025,
+      price: 22222,
+      discount: 18888,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1400,
+   },
+   {
+      id: '3',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Trax',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 22222,
+      year: 2025,
+      price: 22222,
+      discount: 18888,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1400,
+   },
+   {
+      id: '4',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Trax',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 22222,
+      year: 2025,
+      price: 22222,
+      discount: 18888,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1400,
+   },
+   {
+      id: '5',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Trax',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 22222,
+      year: 2025,
+      price: 22222,
+      discount: 18888,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1400,
+   },
+   {
+      id: '6',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Trax',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 22222,
+      year: 2025,
+      price: 22222,
+      discount: 18888,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1400,
+   },
+   {
+      id: '7',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Trax',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 22222,
+      year: 2025,
+      price: 22222,
+      discount: 18888,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1400,
+   },
+   {
+      id: '8',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Trax',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 22222,
+      year: 2025,
+      price: 22222,
+      discount: 18888,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1400,
+   },
+   {
+      id: '9',
+      photo: carImage,
+      brand: 'Chevrolet',
+      model: 'Trax',
+      country: 'USA',
+      confiquration: 'M340i',
+      transmission: '(АКПП8)',
+      drive: '(2WD)',
+      engine: 'БЕНЗИН 3.0 (387 л.с)',
+      mileage: 22222,
+      year: 2025,
+      price: 22222,
+      discount: 18888,
+      status: 'В наличии',
+      bodyType: 'Sedan',
+      color: 'Silver',
+      engineVolume: 1400,
+   },
+];
+
+export const fetchCars = async (): Promise<Car[]> => {
+   return new Promise(resolve => {
+      setTimeout(() => resolve(mockCars), 1000);
+   });
+};
+
+export const fetchCarById = async (id: string): Promise<Car | undefined> => {
+   return new Promise(resolve => {
+      setTimeout(() => resolve(mockCars.find(car => car.id === id)), 500);
+   });
+};
+
+export const carsApi = createApi({
+   reducerPath: 'carsApi',
+   baseQuery: fakeBaseQuery(),
+   endpoints: builder => ({
+      getCars: builder.query<Car[], void>({
+         queryFn: async () => {
+            await new Promise(res => setTimeout(res, 1000));
+            return { data: mockCars };
+         },
+      }),
+      getCarById: builder.query<Car | undefined, string>({
+         queryFn: async id => {
+            await new Promise(res => setTimeout(res, 500));
+            const car = mockCars.find(c => c.id === id);
+            if (car) return { data: car };
+            return { error: { status: 404, data: 'Not found' } as any };
+         },
+      }),
+   }),
+});
+
+export const { useGetCarsQuery, useGetCarByIdQuery } = carsApi;

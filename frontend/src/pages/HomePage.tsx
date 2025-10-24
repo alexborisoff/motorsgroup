@@ -42,7 +42,7 @@ export const HomePage = () => {
    return (
       <main className="flex flex-col items-center gap-15 relative overflow-x-hidden">
          <section className="w-[80%] flex flex-col ">
-            <img className="absolute top-[50px] left-[550px]  z-[4]" src={car} alt="Привезем автомобиль" />
+            <img className="absolute top-[50px] left-[550px]  z-[4] xl:left-[650px] 2xl:left-[1300px]" src={car} alt="Привезем автомобиль" />
             <h1 id="title" className="max-w-3xl pt-6 text-[90px] leading-26 font-extrabold tracking-normal ">
                <span className="text-primary">ПРИВЕЗЕМ</span> АВТОМОБИЛЬ
             </h1>

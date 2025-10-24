@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import phoneIcon from '../../assets/images/icons/phone_icon.svg';
 import { NavLink, Link } from 'react-router';
 
 export const Header = () => {
-   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
    const navLinkClass = ({ isActive }: { isActive: boolean }) =>
       `px-5 py-2 rounded-3xl transition-colors  ${
-         isActive ? 'bg-[#C7A943] text-white font-semibold' : 'text-white/80 hover:text-[#C7A943]'
+         isActive ? 'bg-primary text-white font-semibold' : 'text-white/80 hover:text-primary'
       }`;
 
    return (

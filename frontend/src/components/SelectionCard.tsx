@@ -36,7 +36,7 @@ export const SelectionCard = () => {
             <div className="p-4 flex items-center h-25 w-[670px] gap-5 bg-[#202020] rounded-[15px]" key={card.image}>
                <img src={card.image} alt="Картинка карточки" />
                <div>
-                  <p className=" text-[20px] font-bold">{card.title}</p>
+                  <p className="text-[20px] font-bold">{card.title}</p>
                   <p className="text-[16px]">{card.description}</p>
                </div>
             </div>

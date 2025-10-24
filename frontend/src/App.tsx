@@ -9,12 +9,10 @@ import { Header } from './components/UI/Header';
 import { Footer } from './components/UI/Footer';
 import { PrivacyPage } from './pages/PrivacyPage';
 
-
 export const App = () => {
    return (
       <>
          <Header />
-
          <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/selection" element={<SelectionPage />} />
@@ -25,7 +23,6 @@ export const App = () => {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
          </Routes>
-
          <Footer />
       </>
    );

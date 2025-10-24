@@ -44,7 +44,7 @@ export const ContactInfo = () => {
          </div>
 
          <div>
-            <p className="font-light"> Адрес: г. Минск ул. Тиражная 150, офис 311</p>
+            <p className="font-light"> Адрес: г. Минск ул. Тиражная 150, офис 307</p>
             <p>Время работы: пн-пт с 10.00 до 19.00</p>
             <div className="flex pt-5 gap-[10px]">
                {SOCIAL_NETWORKS.map(({ href, icon, alt }) => (
