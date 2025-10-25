@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
 import type { Car } from '../types/Car';
 import { CarItem } from './CarItem';
+import { MarkerLeft } from './UI/MarkerLeft';
+import { MarkerRight } from './UI/MarkerRight';
 
 interface PaginationProps {
    cars: Car[];
@@ -22,14 +24,16 @@ export const Pagination: React.FC<PaginationProps> = ({ cars, itemsPerPage = 4 }
    };
 
    return (
-      <>
-         {carList.map(car => (
-            <CarItem key={car.id} car={car} />
-         ))}
+      <div className="flex flex-col">
+         <div className="flex flex-wrap justify-start items-center gap-[30px]">
+            {carList.map(car => (
+               <CarItem key={car.id} car={car} />
+            ))}
+         </div>
 
-         <div className="flex items-center gap-2">
+         <div className="pt-7 flex items-center justify-center gap-2">
             <button onClick={() => handlePageSwitch(currentPage - 1)} disabled={currentPage === 1}>
-               {'<'}
+               <MarkerLeft />
             </button>
 
             {[...Array(totalPages)].map((_, index) => {
@@ -38,8 +42,10 @@ export const Pagination: React.FC<PaginationProps> = ({ cars, itemsPerPage = 4 }
                   <button
                      key={page}
                      onClick={() => handlePageSwitch(page)}
-                     className={`px-3 py-1 rounded transition ${
-                        currentPage === page ? 'bg-primary text-white font-semibold' : 'bg-gray-100 hover:bg-gray-200'
+                     className={`size-[30px] rounded-[5px] transition duration-300 ${
+                        currentPage === page
+                           ? 'bg-primary text-white hover:bg-secondary'
+                           : 'bg-dark-20 hover:bg-gray-700'
                      }`}
                   >
                      {page}
@@ -47,14 +53,10 @@ export const Pagination: React.FC<PaginationProps> = ({ cars, itemsPerPage = 4 }
                );
             })}
 
-            <button
-               onClick={() => handlePageSwitch(currentPage + 1)}
-               disabled={currentPage === totalPages}
-               className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition"
-            >
-               {'>'}
+            <button onClick={() => handlePageSwitch(currentPage + 1)} disabled={currentPage === totalPages}>
+               <MarkerRight />
             </button>
          </div>
-      </>
+      </div>
    );
 };
