@@ -29,7 +29,7 @@ export const CatalogPage = () => {
             <SearchBar />
          </section>
 
-         <section className="flex flex-wrap justify-center w-[80%] items-center gap-[30px]">
+         <section className="flex flex-wrap justify-center w-[80%] items-center gap-[30px] ">
             <div>{isLoading ? <p>Loader</p> : <></>}</div>
             <Pagination cars={carList} itemsPerPage={8} />
          </section>
