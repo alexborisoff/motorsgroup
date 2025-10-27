@@ -7,7 +7,7 @@ interface CarItemProps {
 
 export const CarItem = ({ car }: CarItemProps) => {
    return (
-      <div className="flex flex-col max-w-[18vw] border-[#C7A94333] rounded-[20px] border">
+      <div className="flex flex-col max-w-[18vw] border-[#C7A94333] rounded-[20px] border 2xl:text-xl">
          <img
             className=" rounded-t-[20px] object-cover"
             src={car.photo}
